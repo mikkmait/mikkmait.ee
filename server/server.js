@@ -21,7 +21,7 @@ const client = new MongoClient(atlasUrl);
 const dbName = client.db('angularTest');
 const articles = dbName.collection('articles');
 
-const queryArticles = {$or: [{category: 'AudioVisual'}, {category: 'Theatre'}]};
+const queryArticles = {$or: [{category: 'AudioVisual'}, {category: 'Theatre'}, {category: 'Programming'}, {category: 'Writing'}]};
 const returnArticles = { _id: 0, category: 1, articleHeading: 1, articleContent: 1, date: 1, time: 1, author: 1};
 
 articlesRouter.route('/').get((req, res) => {
