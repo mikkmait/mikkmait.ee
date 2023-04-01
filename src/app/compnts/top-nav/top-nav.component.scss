@@ -8,17 +8,24 @@ nav {
     border: 0;
     li {
       border: 0;
-      a { 
+      a {
         border: 0;
       }
     }
   }
 }
 
+nav.nav-bar {
+  background-color: rgba(255, 0, 127, 100%);
+  width: 100vw;
+  max-width: 1920px;
+}
+
 ul.nav-bar {
   background-color: rgba(255, 0, 127, 100%);
-  
-  width: 100vw;
+
+  width: 100%;
+  max-width: 1920px;
   padding: 1rem;
 
   position: fixed;
