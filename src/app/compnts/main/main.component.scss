@@ -13,3 +13,23 @@
 //   top: 3.2rem;
 //   // margin: 64px 10px;
 // }
+
+.card-xsmall {
+  width: 100%;
+}
+
+.card-small {
+  width: calc(50% - .75rem);
+}
+
+.card-medium {
+  width: calc(33% - .75rem);
+}
+
+.card-large {
+  width: calc(25% - .75rem);
+}
+
+.card-xlarge {
+  width: calc(20% - .75rem);
+}
