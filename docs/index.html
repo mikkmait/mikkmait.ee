@@ -1,0 +1,20 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8">
+  <title>Mikk-Mait Kivi</title>
+  <base href="mikkmait.ee">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+<style>*{font-family:American Typewriter;border:1px solid hotpink;margin:0;padding:0}html,body,app-root{border:0}</style><link rel="stylesheet" href="styles.c338156157abc0d1.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles.c338156157abc0d1.css"></noscript></head>
+<body>
+  <app-root></app-root>
+  <script>
+    const baseUrl = 'http://localhost:7089';
+    const loadPosts = async () => {
+      let result = await fetch(`${baseUrl}/articles`).then(resp => resp.json());
+      console.log(result);
+    }
+    loadPosts();
+  </script>
+<script src="runtime.c8fcd6c737b5ecdd.js" type="module"></script><script src="polyfills.06369617a1144a5d.js" type="module"></script><script src="main.42cb3bea3050b085.js" type="module"></script>
+
+</body></html>
