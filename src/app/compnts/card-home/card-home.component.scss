@@ -1,0 +1,38 @@
+h1 {
+  font-size: 1.6rem;
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 1rem;
+  font-weight: normal;
+  margin: 1rem 0;
+}
+
+h3 {
+  font-size: .8rem;
+  font-weight: lighter;
+}
+
+p {
+  font-size: .8rem;
+  font-weight: lighter;
+  margin: 1rem 0;
+}
+
+div.read-more {
+  background-color: rgba(242, 210, 189, 50%);
+
+  width: 100%;
+  padding: .5rem 1rem;
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  a {
+    text-decoration: none;
+    color: rgba(255, 0, 127, 100%);
+    font-weight: 600;
+  }
+}

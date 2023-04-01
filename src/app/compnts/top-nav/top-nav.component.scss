@@ -1,0 +1,48 @@
+* {
+  border: 0;
+}
+
+nav {
+  border: 0;
+  ul {
+    border: 0;
+    li {
+      border: 0;
+      a { 
+        border: 0;
+      }
+    }
+  }
+}
+
+ul.nav-bar {
+  background-color: rgba(255, 0, 127, 100%);
+  
+  width: 100vw;
+  padding: 1rem;
+
+  position: fixed;
+  z-index: 1;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  li {
+    display: inline-block;
+    font-size: 1.2rem;
+  }
+}
+
+a.nav-link {
+  font-family: 'American Typewriter';
+  color: aliceblue;
+  text-decoration: line-through;
+  text-decoration-color: rgba(0, 0, 0, 100%);
+  transition: 300ms;
+  &:hover {
+    text-decoration: line-through;
+    text-decoration-color: rgba(0, 0, 0, 0%);
+    transition: 1200ms;
+  }
+}

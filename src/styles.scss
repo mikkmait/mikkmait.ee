@@ -1,1 +1,36 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  font-family: 'American Typewriter';
+  border: 1px solid hotpink;
+  margin: 0px;
+  padding: 0px;
+}
+
+html, body, app-root, app-top-nav, app-main, app-card-home, nav, ul, li, p {
+  border: 0;
+}
+
+app-main {
+  padding: 1rem;
+
+  position: relative;
+  top: 3.4rem;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+app-card-home {
+  border: 1px solid rgba(255, 0, 127, 100%);
+
+  min-width: 192px;
+  width: calc(25% - 0.75rem);
+  aspect-ratio: 2 / 3;
+  padding: 1rem;
+  box-sizing: border-box;
+
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
