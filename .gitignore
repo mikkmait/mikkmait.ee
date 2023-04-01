@@ -8,7 +8,7 @@
 /bazel-out
 
 # .env delicate stuff
-.env
+# .env
 
 # Node
 /node_modules
