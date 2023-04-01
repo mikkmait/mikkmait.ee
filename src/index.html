@@ -9,13 +9,5 @@
 </head>
 <body>
   <app-root></app-root>
-  <script>
-    const baseUrl = 'https://mikkmait-portfolio.herokuapp.com';
-    const loadPosts = async () => {
-      let result = await fetch(`${baseUrl}/articles`).then(resp => resp.json());
-      console.log(result);
-    }
-    loadPosts();
-  </script>
 </body>
 </html>

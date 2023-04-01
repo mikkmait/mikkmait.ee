@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-main',
@@ -7,5 +7,12 @@ import { Component, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None,
 })
 export class MainComponent {
+  private url: string = 'https://mikkmait-portfolio.herokuapp.com/articles';
 
+  data: any;
+  ngOnInit(): void {
+    fetch(this.url)
+      .then((response) => response.json())
+      .then((articles) => (this.data = articles));
+  }
 }

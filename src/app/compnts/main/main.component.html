@@ -1,4 +1,5 @@
 
+<!-- <app-card-home></app-card-home>
 <app-card-home></app-card-home>
 <app-card-home></app-card-home>
 <app-card-home></app-card-home>
@@ -17,6 +18,13 @@
 <app-card-home></app-card-home>
 <app-card-home></app-card-home>
 <app-card-home></app-card-home>
-<app-card-home></app-card-home>
-<app-card-home></app-card-home>
+<app-card-home></app-card-home> -->
 
+<app-card-home *ngFor="let article of data"
+  articleHeading="{{ article.articleHeading}}"
+  category="{{ article.category }}"
+  date="{{ article.date }}"
+  time="{{ article.time }}"
+  author="{{ article.author }}"
+  articleContent="{{ article.articleContent }}">
+</app-card-home>
