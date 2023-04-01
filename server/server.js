@@ -24,6 +24,13 @@ const articles = dbName.collection('articles');
 const queryArticles = {category: any};
 const returnArticles = { _id: 0, category: 1, articleHeading: 1, articleContent: 1, date: 1, time: 1, author: 1};
 
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  next();
+});
+
 articlesRouter.route('/').get((req, res) => {
   (async function mongo (){
     try {
@@ -34,24 +41,7 @@ articlesRouter.route('/').get((req, res) => {
       debug(error.stack);
     }
   }())
-})
-
-app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-  next();
 });
-const whitelist = ['https://mikkmait.github.io'];
-const corsOptions = {
-  origin: function (origin, callback) {
-    if (whitelist.indexOf(origin) !== -1 || !origin) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed on CORS'));
-    }
-  }
-};
 
 app.use(cors());
 
