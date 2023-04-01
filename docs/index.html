@@ -8,7 +8,7 @@
 <body>
   <app-root></app-root>
   <script>
-    const baseUrl = 'http://localhost:7089';
+    const baseUrl = 'https://mikkmait-portfolio.herokuapp.com';
     const loadPosts = async () => {
       let result = await fetch(`${baseUrl}/articles`).then(resp => resp.json());
       console.log(result);
