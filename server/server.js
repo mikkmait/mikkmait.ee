@@ -21,15 +21,8 @@ const client = new MongoClient(atlasUrl);
 const dbName = client.db('angularTest');
 const articles = dbName.collection('articles');
 
-const queryArticles = {category: any};
+const queryArticles = {$or: [{category: 'AudioVisual'}, {category: 'Theatre'}]};
 const returnArticles = { _id: 0, category: 1, articleHeading: 1, articleContent: 1, date: 1, time: 1, author: 1};
-
-app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-  next();
-});
 
 articlesRouter.route('/').get((req, res) => {
   (async function mongo (){
@@ -41,6 +34,13 @@ articlesRouter.route('/').get((req, res) => {
       debug(error.stack);
     }
   }())
+})
+
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  next();
 });
 
 app.use(cors());
