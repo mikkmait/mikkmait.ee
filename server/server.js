@@ -23,12 +23,12 @@ const articles = dbName.collection('articles');
 
 const queryArticles = {$or: [{category: 'AudioVisual'}, {category: 'Theatre'}, {category: 'Programming'}, {category: 'Writing'}]};
 const returnArticles = { _id: 0, category: 1, articleHeading: 1, articleContent: 1, date: 1, time: 1, author: 1};
+const sortArticles = { _id: -1 };
 
 articlesRouter.route('/').get((req, res) => {
   (async function mongo (){
     try {
-      const articleList = await articles.find(queryArticles, returnArticles).toArray();
-      console.log(articleList);
+      const articleList = await articles.find(queryArticles, returnArticles).sort(sortArticles).toArray();
       res.send(articleList).status(200);
     } catch (error) {
       debug(error.stack);
